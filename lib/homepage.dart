@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'color.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -35,7 +37,7 @@ class HomePageState extends State<HomePage> {
         itemBuilder: (context, index) {
           return Card(
             elevation: 20,
-            shadowColor: Colors.grey,
+            shadowColor: primary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
@@ -55,7 +57,9 @@ class HomePageState extends State<HomePage> {
                         Text(
                           overflow: TextOverflow.ellipsis,
                           '${listMember['member']![index]['nama']}',
-                          style: const TextStyle(fontSize: 20),
+                          style: TextStyle(
+                            color: primary,
+                            fontSize: 20),
                           maxLines: 1,
                         ),
                         const SizedBox(
@@ -63,7 +67,9 @@ class HomePageState extends State<HomePage> {
                         ),
                         Text(
                           '${listMember['member']![index]['nim']}',
-                          style: const TextStyle(fontSize: 20),
+                          style: TextStyle(
+                            color: primary,
+                            fontSize: 20),
                           maxLines: 1,
                         ),
                         const SizedBox(
@@ -71,7 +77,9 @@ class HomePageState extends State<HomePage> {
                         ),
                         Text(
                           '${listMember['member']![index]['kelas']}',
-                          style: const TextStyle(fontSize: 20),
+                          style: TextStyle(
+                            color: primary,
+                            fontSize: 20),
                           maxLines: 1,
                         ),
                       ],

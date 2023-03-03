@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:tugastpm1/calculatorpage.dart';
 import 'package:tugastpm1/homepage.dart';
 
@@ -20,9 +18,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tugas 2 TPM'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(selectedIndex),
       ),
@@ -47,8 +42,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
             },
           );
         },
-        selectedItemColor: Color.fromARGB(255, 51, 88, 107),
-        unselectedItemColor: Color.fromARGB(255, 130, 141, 146),
+        selectedItemColor: const Color.fromARGB(255, 51, 88, 107),
+        unselectedItemColor: const Color.fromARGB(255, 130, 141, 146),
         currentIndex: selectedIndex,
       ),
     );

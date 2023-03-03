@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:tugastpm1/bottomnavigation.dart';
-import 'package:tugastpm1/homepage.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -10,9 +7,6 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Login Page"),
-        ),
         body: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,7 +49,7 @@ class LoginPage extends StatelessWidget {
                     child: const Text('Login'),
                     onPressed: () {
                       Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => BottomNavigation()),
+                          MaterialPageRoute(builder: (context) => const BottomNavigation()),
                       );
                     },
                   )),
